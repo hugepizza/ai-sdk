@@ -9,7 +9,7 @@
 ### 可以使用ffmpeg调整音频的格式、声道和采样率 例:
 
 ```
-fx ffmpeg -i test.mp3 -ac 1 -ar 8k -f wav test.wav
+ffmpeg -i test.mp3 -ac 1 -ar 8k -f wav test.wav
 
 ```
 
