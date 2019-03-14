@@ -1,4 +1,4 @@
-# 腾讯AI
+# 腾讯AI SDK
 
 ## audio2text 长语音转文字
 
