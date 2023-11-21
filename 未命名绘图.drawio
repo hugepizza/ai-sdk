@@ -1,9 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2023-11-21T10:24:09.338Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="22.1.3" etag="MPI-60c_REkzkTcpbXWJ" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-21T10:51:24.005Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="MnusMhsNyKPIORJPzzQ9" version="22.1.3" type="github">
   <diagram name="第 1 页" id="S5Oq19xVci1JMA5GQNWa">
-    <mxGraphModel>
+    <mxGraphModel dx="2190" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="EipYLuMrGkxj46YCdmYt-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.539;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EipYLuMrGkxj46YCdmYt-1" target="EipYLuMrGkxj46YCdmYt-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660.0000000000002" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-13" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="EipYLuMrGkxj46YCdmYt-10">
+          <mxGeometry x="1" y="-9" relative="1" as="geometry">
+            <mxPoint x="1" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-1" value="cart service&lt;br&gt;// add sku to cart&lt;br&gt;func add(userId,{productId,skuId})&lt;br&gt;// create an order&lt;br&gt;func checkout(skus,userId,address){}" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="540" width="440" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-2" value="product" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="210" y="380" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-3" value="sku" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="210" y="550" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.616;exitY=-0.024;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EipYLuMrGkxj46YCdmYt-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="510" as="sourcePoint" />
+            <mxPoint x="260" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-6" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="EipYLuMrGkxj46YCdmYt-3" target="EipYLuMrGkxj46YCdmYt-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="590" as="sourcePoint" />
+            <mxPoint x="290" y="593.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-12" value="order service&lt;br&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;create(userId,payProviderName,[{productId,skuId}])&lt;br&gt;// get porvider and call pay()&lt;br&gt;pay(){&lt;br&gt;// get amount&lt;br&gt;// get provider&lt;br&gt;}&lt;br&gt;paySuccessCallback(){&lt;br&gt;// after paysuccess&lt;br&gt;&lt;br&gt;}" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="750" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-14" value="payment service&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;interface PayProvider(){&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;function pay()&lt;br&gt;// notify provider&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;checkoutCallback()&lt;br&gt;}&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;CreditProvider&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;BitcoinProvider&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;USDTProvider" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="950" width="470" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-15" value="user" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="700" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EipYLuMrGkxj46YCdmYt-16" value="address service&lt;br&gt;add()&lt;br&gt;list()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="810" width="260" height="120" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
